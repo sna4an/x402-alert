@@ -1,0 +1,201 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "x402 Alert - Financial Alerts & Monitoring API Hub",
+    "description": "14 paid financial API endpoints. Pay with USDC on Base using x402 protocol.",
+    "version": "1.0.0",
+    "contact": {
+      "name": "x402-alert",
+      "url": "https://x402-alert.vercel.app"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://x402-alert.vercel.app"
+    }
+  ],
+  "paths": {
+    "/api/india-stock": {
+      "get": {
+        "summary": "Indian stock market data from MoneyControl",
+        "description": "Proxy to india-stock-market-moneycontrol.p.rapidapi.com. Price: $0.075 USDC.",
+        "parameters": [
+          { "in": "query", "name": "path", "schema": { "type": "string" }, "description": "Sub-path on RapidAPI host" }
+        ],
+        "responses": {
+          "200": { "description": "Successful response" },
+          "402": { "description": "Payment required" }
+        }
+      }
+    },
+    "/api/fuel-price": {
+      "get": {
+        "summary": "Live petrol & diesel prices in India",
+        "description": "Proxy to fuel-petrol-diesel-live-price-india.p.rapidapi.com. Price: $0.05 USDC.",
+        "parameters": [
+          { "in": "query", "name": "path", "schema": { "type": "string" }, "description": "Sub-path on RapidAPI host" }
+        ],
+        "responses": {
+          "200": { "description": "Successful response" },
+          "402": { "description": "Payment required" }
+        }
+      }
+    },
+    "/api/gold-silver": {
+      "get": {
+        "summary": "Live gold & silver prices in India",
+        "description": "Proxy to gold-silver-live-price-india.p.rapidapi.com. Price: $0.06 USDC.",
+        "parameters": [
+          { "in": "query", "name": "path", "schema": { "type": "string" }, "description": "Sub-path on RapidAPI host" }
+        ],
+        "responses": {
+          "200": { "description": "Successful response" },
+          "402": { "description": "Payment required" }
+        }
+      }
+    },
+    "/api/sec-risk": {
+      "get": {
+        "summary": "SEC 8-K risk signal analysis",
+        "description": "Proxy to sec-8-k-risk-signals.p.rapidapi.com. Price: $0.10 USDC.",
+        "parameters": [
+          { "in": "query", "name": "path", "schema": { "type": "string" }, "description": "Sub-path on RapidAPI host" }
+        ],
+        "responses": {
+          "200": { "description": "Successful response" },
+          "402": { "description": "Payment required" }
+        }
+      }
+    },
+    "/api/defi-yield": {
+      "get": {
+        "summary": "Real DeFi yield & APY analysis",
+        "description": "Proxy to defi-yield-honesty-real-apy.p.rapidapi.com. Price: $0.09 USDC.",
+        "parameters": [
+          { "in": "query", "name": "path", "schema": { "type": "string" }, "description": "Sub-path on RapidAPI host" }
+        ],
+        "responses": {
+          "200": { "description": "Successful response" },
+          "402": { "description": "Payment required" }
+        }
+      }
+    },
+    "/api/indian-exchange": {
+      "get": {
+        "summary": "Indian Stock Exchange (NSE/BSE) data",
+        "description": "Proxy to indian-stock-exchange-api2.p.rapidapi.com. Price: $0.075 USDC.",
+        "parameters": [
+          { "in": "query", "name": "path", "schema": { "type": "string" }, "description": "Sub-path on RapidAPI host" }
+        ],
+        "responses": {
+          "200": { "description": "Successful response" },
+          "402": { "description": "Payment required" }
+        }
+      }
+    },
+    "/api/hyperliquid": {
+      "get": {
+        "summary": "Hyperliquid OI, funding & market data",
+        "description": "Proxy to hyperliquid-market-data-oi-funding.p.rapidapi.com. Price: $0.08 USDC.",
+        "parameters": [
+          { "in": "query", "name": "path", "schema": { "type": "string" }, "description": "Sub-path on RapidAPI host" }
+        ],
+        "responses": {
+          "200": { "description": "Successful response" },
+          "402": { "description": "Payment required" }
+        }
+      }
+    },
+    "/api/exchange-rates": {
+      "get": {
+        "summary": "Fast currency exchange rates",
+        "description": "Proxy to fast-price-exchange-rates.p.rapidapi.com. Price: $0.05 USDC.",
+        "parameters": [
+          { "in": "query", "name": "path", "schema": { "type": "string" }, "description": "Sub-path on RapidAPI host" }
+        ],
+        "responses": {
+          "200": { "description": "Successful response" },
+          "402": { "description": "Payment required" }
+        }
+      }
+    },
+    "/api/trading-signals": {
+      "get": {
+        "summary": "Trading signals & alerts",
+        "description": "Proxy to traders-hub-trading-signals5.p.rapidapi.com. Price: $0.12 USDC.",
+        "parameters": [
+          { "in": "query", "name": "path", "schema": { "type": "string" }, "description": "Sub-path on RapidAPI host" }
+        ],
+        "responses": {
+          "200": { "description": "Successful response" },
+          "402": { "description": "Payment required" }
+        }
+      }
+    },
+    "/api/insider-trades": {
+      "get": {
+        "summary": "Insider trading alerts & data",
+        "description": "Proxy to insider-trade-alerts.p.rapidapi.com. Price: $0.10 USDC.",
+        "parameters": [
+          { "in": "query", "name": "path", "schema": { "type": "string" }, "description": "Sub-path on RapidAPI host" }
+        ],
+        "responses": {
+          "200": { "description": "Successful response" },
+          "402": { "description": "Payment required" }
+        }
+      }
+    },
+    "/api/bin-checker": {
+      "get": {
+        "summary": "BIN/IIN card info lookup",
+        "description": "Proxy to bin-info-checker.p.rapidapi.com. Price: $0.05 USDC.",
+        "parameters": [
+          { "in": "query", "name": "path", "schema": { "type": "string" }, "description": "Sub-path on RapidAPI host" }
+        ],
+        "responses": {
+          "200": { "description": "Successful response" },
+          "402": { "description": "Payment required" }
+        }
+      }
+    },
+    "/api/username-check": {
+      "get": {
+        "summary": "Username availability across platforms",
+        "description": "Proxy to username-availability-checker2.p.rapidapi.com. Price: $0.05 USDC.",
+        "parameters": [
+          { "in": "query", "name": "path", "schema": { "type": "string" }, "description": "Sub-path on RapidAPI host" }
+        ],
+        "responses": {
+          "200": { "description": "Successful response" },
+          "402": { "description": "Payment required" }
+        }
+      }
+    },
+    "/api/dev-intelligence": {
+      "get": {
+        "summary": "Developer intelligence & code analysis",
+        "description": "Proxy to gocreative-developer-intelligence.p.rapidapi.com. Price: $0.15 USDC.",
+        "parameters": [
+          { "in": "query", "name": "path", "schema": { "type": "string" }, "description": "Sub-path on RapidAPI host" }
+        ],
+        "responses": {
+          "200": { "description": "Successful response" },
+          "402": { "description": "Payment required" }
+        }
+      }
+    },
+    "/api/cellystial": {
+      "get": {
+        "summary": "Celestial satellite & celestial data",
+        "description": "Proxy to cellystial.p.rapidapi.com. Price: $0.08 USDC.",
+        "parameters": [
+          { "in": "query", "name": "path", "schema": { "type": "string" }, "description": "Sub-path on RapidAPI host" }
+        ],
+        "responses": {
+          "200": { "description": "Successful response" },
+          "402": { "description": "Payment required" }
+        }
+      }
+    }
+  }
+}
