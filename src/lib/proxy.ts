@@ -46,6 +46,36 @@ export async function proxy(req: NextRequest, rapidHost: string, atomicPrice: nu
         payTo: TREASURY, maxTimeoutSeconds: 300,
         extra: { name: "USD Coin", version: "2" }
       }],
+    extensions: {
+      bazaar: {
+        info: {
+          input: {
+            type: "http",
+            method: "POST",
+            bodyType: "json",
+            body: {
+              type: "object",
+              properties: {
+                query: { type: "string", description: "Input parameter" }
+              }
+            }
+          },
+          output: {
+            type: "object",
+            properties: {
+              result: { type: "object", description: "API response data" }
+            },
+            example: { result: { data: "example response" } }
+          }
+        },
+        schema: {
+          type: "object",
+          properties: {
+            result: { type: "object", description: "API response data" }
+          }
+        }
+      }
+    }
     };
     const encoded = Buffer.from(JSON.stringify(requirements)).toString("base64");
     const res = NextResponse.json({}, { status: 402 });
